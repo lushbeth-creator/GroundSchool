@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Graduation from New Hire Period</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+  }
+
+  .outer {
+    border: 1px solid #d8dce8;
+    border-radius: 8px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #ffffff 0%, #e8edf8 100%);
+  }
+
+  .panel {
+    padding: 26px 32px 30px 32px;
+  }
+
+  .content-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .content-col {
+    flex: 1;
+    min-width: 0;
+  }
+
+  ol.main-list {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .step-row {
+    display: flex;
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e8edf8;
+  }
+
+  .step-row:last-child {
+    border-bottom: none;
+  }
+
+  .step-num {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #59A398;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-text {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.6;
+    padding-top: 3px;
+  }
+
+  ul.sub-list {
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 0;
+  }
+
+  ul.sub-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  ul.sub-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #5D70AE;
+  }
+
+  .icon-col {
+    flex-shrink: 0;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .grad-icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  @media (max-width: 520px) {
+    .content-row { flex-direction: column-reverse; }
+    .icon-col { width: 100%; padding-top: 0; margin-bottom: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="outer">
+  <div class="panel">
+
+    <div class="content-row">
+      <div class="content-col">
+        <ol class="main-list">
+          <li class="step-row">
+            <div class="step-num">1</div>
+            <div class="step-text">All New Hire Training curriculum and expectations are completed.</div>
+          </li>
+          <li class="step-row">
+            <div class="step-num">2</div>
+            <div class="step-text">Attend Monthly Learning Lift-Off Webinars.</div>
+          </li>
+          <li class="step-row">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              New Hire Minimum Performance Expectation is achieved:
+              <ul class="sub-list">
+                <li>Hire Month (if mid-month): Pipeline Development</li>
+                <li>Full Month 1: 1+ Deal Installed ($2,000 in margin)</li>
+                <li>Full Month 2: 2+ Deals Installed ($4,000 in margin)</li>
+                <li>Full Month 3: 2+ Deals Installed ($6,000 in margin)</li>
+                <li>Full Month 4: 3+ Deals Installed ($8,000 in margin)</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="icon-col">
+        <svg class="grad-icon" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cap board (diamond) -->
+          <path d="M110 48 L60 23 L10 48 L60 73 L110 48 Z"
+                fill="#F3F6FF" stroke="#5D70AE" stroke-width="2" stroke-linejoin="round"/>
+          <!-- Band -->
+          <path d="M32 58 V80 C32 88 44.5 95 60 95 C75.5 95 88 88 88 80 V58"
+                stroke="#5D70AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- Tassel cord -->
+          <path d="M110 48 V78" stroke="#59A398" stroke-width="1.8" stroke-linecap="round"/>
+          <!-- Tassel bob -->
+          <circle cx="110" cy="81" r="3" fill="#59A398"/>
+          <path d="M110 84 L106 96 M110 84 L110 97 M110 84 L114 96"
+                stroke="#59A398" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
