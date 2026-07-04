@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propelr: Onboarding Week</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding:.5rem}
+
+.outer{
+  border:1px solid #d8dce8;
+  border-radius:8px;
+  overflow:hidden;
+  background:linear-gradient(to bottom,#ffffff 0%,#e8edf8 100%);
+}
+.panel{padding:22px 24px}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#59A398;margin-bottom:18px;text-align:center}
+
+.day-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:560px){.day-grid{grid-template-columns:1fr}}
+
+.day-card{
+  background:linear-gradient(to bottom,#ffffff 0%,#E8EDF8 100%);
+  border:1px solid #A6B3D5;
+  border-radius:10px;
+  padding:20px 20px 22px;
+  text-align:center;
+}
+
+.day-title{
+  font-family:'Inter',sans-serif;
+  font-weight:700;
+  font-size:20px;
+  color:#1B2F5B;
+  margin-bottom:8px;
+}
+
+.day-subtitle{
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  color:#59A398;
+  margin-bottom:14px;
+}
+
+.day-body{font-size:14px;color:#444;line-height:1.65;text-wrap:balance}
+</style>
+</head>
+<body>
+
+<div class="outer">
+  <div class="panel">
+
+    <div class="day-grid">
+      <div class="day-card">
+        <h3 class="day-title">Welcome Wednesday</h3>
+        <p class="day-subtitle">3:00 p.m. to 5:00 p.m. EST</p>
+        <p class="day-body">Welcome aboard. Today is about getting you grounded, introduced, and set up. We'll walk through Training Week, meet the team, and configure your tools, Teams, Slack, Outlook, Stratus, and your Employee Portal.</p>
+      </div>
+      <div class="day-card">
+        <h3 class="day-title">Field Day Friday</h3>
+        <p class="day-subtitle">Schedule time with your leadership</p>
+        <p class="day-body">Friday is field day. Get out there, meet business owners, and use Stratus to log your activity. Then sit down with your leader, pull out your Playbook, and set your intentions before Monday.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
