@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Onboarding Week Schedule</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: transparent;
+  }
+
+  .day-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .day-card {
+    border: 1px solid #d8dce8;
+    border-radius: 8px;
+    background: linear-gradient(to bottom, #ffffff 0%, #e8edf8 100%);
+    padding: 22px 24px;
+    text-align: center;
+  }
+
+  .day-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #5D70AE;
+    margin: 0 0 10px 0;
+  }
+
+  .day-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1B2F5B;
+    margin: 0 0 14px 0;
+  }
+
+  .day-body {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  @media (max-width: 560px) {
+    .day-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="day-grid">
+
+  <div class="day-card">
+    <h3 class="day-title">Welcome Wednesday</h3>
+    <p class="day-subtitle">3:00 p.m. to 5:00 p.m. EST</p>
+    <p class="day-body">
+      Welcome aboard. Today is about getting you grounded, introduced, and set up. We'll walk through Training Week, meet the team, and configure your tools, Teams, Slack, Outlook, Stratus, and your Employee Portal.
+    </p>
+  </div>
+
+  <div class="day-card">
+    <h3 class="day-title">Field Day Friday</h3>
+    <p class="day-subtitle">Schedule time with your leadership</p>
+    <p class="day-body">
+      Friday is field day. Get out there, meet business owners, and use Stratus to log your activity. Then sit down with your leader, pull out your Playbook, and set your intentions before Monday.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
