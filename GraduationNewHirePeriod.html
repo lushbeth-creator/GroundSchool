@@ -2,182 +2,131 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Graduation from New Hire Period</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propelr: Graduation from New Hire Period</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding:.5rem}
 
-  * { box-sizing: border-box; }
+.content{text-align:center}
 
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: transparent;
-  }
+.grad-icon{margin-bottom:10px}
 
-  .outer {
-    border: 1px solid #d8dce8;
-    border-radius: 8px;
-    overflow: hidden;
-    background: linear-gradient(to bottom, #ffffff 0%, #e8edf8 100%);
-  }
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#59A398;margin-bottom:4px}
+.panel-title{font-family:'Inter',sans-serif;font-weight:700;font-size:20px;color:#1B2F5B;margin-bottom:18px}
 
-  .panel {
-    padding: 26px 32px 30px 32px;
-  }
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:left;perspective:1200px;margin-bottom:14px}
+@media (max-width:560px){.step-grid{grid-template-columns:1fr}}
 
-  .content-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 32px;
-    position: relative;
-  }
+.flip-card{height:150px;cursor:pointer}
+.flip-inner{position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg)}
 
-  .content-col {
-    flex: 1;
-    min-width: 0;
-  }
+.flip-face{
+  position:absolute;inset:0;backface-visibility:hidden;
+  background:#F3F6FF;border:1px solid #A6B3D5;border-radius:8px;
+  padding:14px 16px;display:flex;flex-direction:column;
+}
+.flip-front{align-items:center;justify-content:center;text-align:center;gap:10px}
+.flip-back{transform:rotateY(180deg);justify-content:center;overflow-y:auto}
 
-  ol.main-list {
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-  }
+.step-num{
+  width:26px;height:26px;border-radius:50%;background:#59A398;color:#fff;
+  font-size:12px;font-weight:700;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+}
+.flip-label{font-size:13px;font-weight:700;color:#1B2F5B;text-wrap:balance}
+.flip-hint{font-size:10.5px;color:#5D70AE;font-weight:600}
 
-  .step-row {
-    display: flex;
-    gap: 14px;
-    padding: 14px 0;
-    border-bottom: 1px solid #e8edf8;
-  }
+.back-title{font-size:11.5px;font-weight:700;color:#1B2F5B;margin-bottom:6px;text-wrap:balance}
+.back-text{font-size:12px;color:#444;line-height:1.5}
 
-  .step-row:last-child {
-    border-bottom: none;
-  }
+.sub-list{margin-top:0}
+.sub-list div{position:relative;padding-left:14px;margin-bottom:5px;font-size:11.5px;color:#444;line-height:1.4}
+.sub-list div:last-child{margin-bottom:0}
+.sub-list span{position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:#5D70AE}
 
-  .step-num {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #59A398;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .step-text {
-    font-size: 16px;
-    color: #444;
-    line-height: 1.6;
-    padding-top: 3px;
-  }
-
-  ul.sub-list {
-    list-style: none;
-    margin: 8px 0 0 0;
-    padding: 0;
-  }
-
-  ul.sub-list li {
-    position: relative;
-    padding-left: 18px;
-    margin-bottom: 8px;
-    color: #444;
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  ul.sub-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 9px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #5D70AE;
-  }
-
-  .icon-col {
-    position: absolute;
-    top: 130px;
-    right: 140px;
-    width: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .grad-icon {
-    width: 210px;
-    height: 210px;
-  }
-
-  @media (max-width: 520px) {
-    .content-row { flex-direction: column-reverse; }
-    .icon-col {
-      position: static;
-      width: 100%;
-      margin-bottom: 12px;
-    }
-  }
+.caution-pill{
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  background:transparent;border:1px solid #B8860B;border-radius:999px;
+  padding:6px 18px;text-align:left;
+}
+.caution-pill svg{flex-shrink:0}
+.caution-pill p{font-size:11.5px;color:#9C6B00;font-weight:400;line-height:1.4}
 </style>
 </head>
 <body>
 
-<div class="outer">
-  <div class="panel">
+<div class="content">
 
-    <div class="content-row">
-      <div class="content-col">
-        <ol class="main-list">
-          <li class="step-row">
+  <svg class="grad-icon" viewBox="0 0 120 120" width="56" height="56">
+    <path d="M34 58 V80 C34 90 45.5 97 60 97 C74.5 97 86 90 86 80 V58 L60 70 L34 58 Z" fill="#1B2F5B"/>
+    <path d="M110 46 L60 21 L10 46 L60 71 L110 46 Z" fill="#5D70AE"/>
+    <path d="M110 46 L60 21 L60 71 L110 46 Z" fill="#5D70AE" opacity="0.75"/>
+    <path d="M60 46 L104 60" stroke="#59A398" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="104" cy="63" r="4" fill="#59A398"/>
+    <path d="M104 67 L99 82 M104 67 L104 83 M104 67 L109 82" stroke="#59A398" stroke-width="2.5" stroke-linecap="round"/>
+  </svg>
+
+  <p class="eyebrow">New Hire Program</p>
+  <h3 class="panel-title">Graduation from New Hire Period</h3>
+
+    <div class="step-grid">
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
             <div class="step-num">1</div>
-            <div class="step-text">All New Hire Training curriculum and expectations are completed.</div>
-          </li>
-          <li class="step-row">
-            <div class="step-num">2</div>
-            <div class="step-text">Attend Monthly Learning Lift-Off Webinars.</div>
-          </li>
-          <li class="step-row">
-            <div class="step-num">3</div>
-            <div class="step-text">
-              New Hire Minimum Performance Expectation is achieved:
-              <ul class="sub-list">
-                <li>Hire Month (if mid-month): Pipeline Development</li>
-                <li>Full Month 1: 1+ Deal Installed ($2,000 in margin)</li>
-                <li>Full Month 2: 2+ Deals Installed ($4,000 in margin)</li>
-                <li>Full Month 3: 2+ Deals Installed ($6,000 in margin)</li>
-                <li>Full Month 4: 3+ Deals Installed ($8,000 in margin)</li>
-              </ul>
-            </div>
-          </li>
-        </ol>
+            <div class="flip-label">Training Complete</div>
+            <div class="flip-hint">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <p class="back-title">Training Complete</p>
+            <p class="back-text">All New Hire Training curriculum and expectations are completed.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="icon-col">
-        <svg class="grad-icon" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Band/base -->
-          <path d="M34 58 V80 C34 90 45.5 97 60 97 C74.5 97 86 90 86 80 V58 L60 70 L34 58 Z"
-                fill="#1B2F5B"/>
-          <!-- Cap board (diamond), solid fill -->
-          <path d="M110 46 L60 21 L10 46 L60 71 L110 46 Z" fill="#5D70AE"/>
-          <!-- Subtle top facet for depth -->
-          <path d="M110 46 L60 21 L60 71 L110 46 Z" fill="#5D70AE" opacity="0.75"/>
-          <!-- Tassel cord -->
-          <path d="M60 46 L104 60" stroke="#59A398" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- Tassel bob -->
-          <circle cx="104" cy="63" r="4" fill="#59A398"/>
-          <path d="M104 67 L99 82 M104 67 L104 83 M104 67 L109 82"
-                stroke="#59A398" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="step-num">2</div>
+            <div class="flip-label">Learning Lift-Off</div>
+            <div class="flip-hint">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <p class="back-title">Learning Lift-Off</p>
+            <p class="back-text">Attend Monthly Learning Lift-Off Webinars.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip-card" onclick="this.classList.toggle('flipped')">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <div class="step-num">3</div>
+            <div class="flip-label">Performance Met</div>
+            <div class="flip-hint">Tap for details</div>
+          </div>
+          <div class="flip-face flip-back">
+            <p class="back-title">Minimum Performance Expectation</p>
+            <div class="sub-list">
+              <div><span></span>Full Month 1: 1+ Deal Installed ($2,000 in margin)</div>
+              <div><span></span>Full Month 2: 2+ Deals Installed ($4,000 in margin)</div>
+              <div><span></span>Full Month 3: 2+ Deals Installed ($6,000 in margin)</div>
+              <div><span></span>Full Month 4: 3+ Deals Installed ($8,000 in margin)</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="caution-pill">
+      <svg width="15" height="15" viewBox="0 0 24 24"><path d="M12 2.5L1.5 21h21L12 2.5z" fill="#B8860B"/><rect x="11.1" y="9" width="1.8" height="6" rx="0.9" fill="#ffffff"/><circle cx="12" cy="17.2" r="1.1" fill="#ffffff"/></svg>
+      <p>Starting mid-month? Focus on pipeline development and selling, full monthly targets begin the 1st of the following month.</p>
+    </div>
+
   </div>
-</div>
 
 </body>
 </html>
