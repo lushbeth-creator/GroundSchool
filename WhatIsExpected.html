@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propelr: What Is Expected of You</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding:.5rem}
+
+.outer{
+  border:1px solid #d8dce8;
+  border-radius:8px;
+  overflow:hidden;
+  background:linear-gradient(to bottom,#ffffff 0%,#e8edf8 100%);
+}
+.panel{padding:22px 24px}
+
+/* Three category cards */
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:24px}
+@media (max-width:820px){.cat-grid{grid-template-columns:1fr}}
+
+.cat-card{background:#F3F6FF;border:1px solid #A6B3D5;border-radius:10px;padding:18px 18px 20px;display:flex;flex-direction:column}
+.cat-eyebrow{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#59A398;margin-bottom:10px}
+.cat-lede{font-size:13.5px;line-height:1.55;margin-bottom:12px;text-wrap:balance}
+.cat-lede .navy{color:#1B2F5B;font-weight:700}
+.cat-lede .green{color:#59A398;font-weight:700}
+.cat-lede .plain{color:#1a1a2e;font-weight:400}
+
+.cat-list{list-style:none;margin:0;padding:0;flex-grow:1}
+.cat-list li{position:relative;padding-left:16px;margin-bottom:8px;font-size:13.5px;color:#444;line-height:1.5}
+.cat-list li:last-child{margin-bottom:0}
+.cat-list li::before{content:'';position:absolute;left:0;top:7px;width:5px;height:5px;border-radius:50%;background:#5D70AE}
+
+.rule-line{height:1px;background:#d8dce8;margin-bottom:22px}
+
+/* MARK intro */
+.mark-title{font-family:'Inter',sans-serif;font-weight:700;font-size:20px;color:#1B2F5B;margin-bottom:8px}
+.mark-sub{font-size:13.5px;color:#444;line-height:1.65;margin-bottom:20px;text-wrap:balance;max-width:720px}
+
+/* MARK cards */
+.mark-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media (max-width:900px){.mark-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:480px){.mark-grid{grid-template-columns:1fr}}
+
+.mark-card{background:#F3F6FF;border:1px solid #A6B3D5;border-radius:10px;padding:18px 16px;display:flex;flex-direction:column}
+.mark-word{font-family:'Inter',sans-serif;font-size:15px;color:#1B2F5B;margin-bottom:10px}
+.mark-word .lead{font-weight:700}
+.mark-word .rest{font-weight:400}
+.mark-body{font-size:12.5px;color:#444;line-height:1.55;margin-bottom:14px;flex-grow:1}
+.mark-body p{margin-bottom:8px}
+.mark-body p:last-child{margin-bottom:0}
+
+.reflect-block{background:#ffffff;border:1px solid #d8dce8;border-radius:6px;padding:10px 12px;min-height:76px;display:flex;flex-direction:column;justify-content:center}
+.reflect-label{font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#59A398;margin-bottom:4px}
+.reflect-text{font-size:12px;color:#444;line-height:1.5;font-style:italic;text-wrap:balance}
+</style>
+</head>
+<body>
+
+<div class="outer">
+  <div class="panel">
+
+    <div class="cat-grid">
+
+      <div class="cat-card">
+        <p class="cat-eyebrow">New Hire Performance</p>
+        <p class="cat-lede"><span class="navy">Minimum Performance Expectations during Four Month</span> <span class="green">New Hire</span> <span class="navy">period:</span></p>
+        <ul class="cat-list">
+          <li>Month One: 1 deal ($2,000 in margin)</li>
+          <li>Month Two: 2 deals ($4,000 in margin)</li>
+          <li>Month Three: 2 deals ($6,000 in margin)</li>
+          <li>Month Four: 3 deals ($8,000 in margin)</li>
+        </ul>
+      </div>
+
+      <div class="cat-card">
+        <p class="cat-eyebrow">New Hire Expectations</p>
+        <p class="cat-lede"><span class="navy">During Four Month</span> <span class="green">New Hire</span> <span class="navy">Period:</span></p>
+        <ul class="cat-list">
+          <li>Attend all 3 days of New Hire Training</li>
+          <li>Complete all New Hire curriculum</li>
+          <li>Attend Monthly Learning Lift-Off</li>
+          <li>Meet New Hire Performance Expectations</li>
+        </ul>
+      </div>
+
+      <div class="cat-card">
+        <p class="cat-eyebrow">Monthly Sales Ongoing</p>
+        <p class="cat-lede"><span class="navy">Making Your</span> <span class="green">MARK</span> <span class="plain">4 Deals and $15k</span></p>
+      </div>
+
+    </div>
+
+    <div class="rule-line"></div>
+
+    <h3 class="mark-title">Making Your MARK: 4 Deals for $15k</h3>
+    <p class="mark-sub">Making your MARK is more than meeting the minimum requirements. The carefully chosen words that make up this acronym can guide you to meet your personal goals!</p>
+
+    <div class="mark-grid">
+
+      <div class="mark-card">
+        <p class="mark-word"><span class="lead">M</span><span class="rest">otivation</span></p>
+        <div class="mark-body">
+          <p>This ties into your why. What drove you to make this career change? Why do you want it? What are you willing to do to achieve your goals?</p>
+        </div>
+        <div class="reflect-block">
+          <p class="reflect-label">Reflect</p>
+          <p class="reflect-text">What is your why?</p>
+        </div>
+      </div>
+
+      <div class="mark-card">
+        <p class="mark-word"><span class="lead">A</span><span class="rest">ction</span></p>
+        <div class="mark-body">
+          <p>Goals are just dreams when action isn't taken to reach them. Without discipline and accountability, you have no profitable action.</p>
+        </div>
+        <div class="reflect-block">
+          <p class="reflect-label">Reflect</p>
+          <p class="reflect-text">In what ways have discipline and accountability made a positive impact on your career?</p>
+        </div>
+      </div>
+
+      <div class="mark-card">
+        <p class="mark-word"><span class="lead">R</span><span class="rest">esilience</span></p>
+        <div class="mark-body">
+          <p>This type of work is not easy. There will be days where it seems like everyone is telling you no or asking you to leave. You are going to have to accept that you're not going to have all of the answers.</p>
+        </div>
+        <div class="reflect-block">
+          <p class="reflect-label">Reflect</p>
+          <p class="reflect-text">What does resilience look like for you?</p>
+        </div>
+      </div>
+
+      <div class="mark-card">
+        <p class="mark-word"><span class="lead">K</span><span class="rest">nowledge</span></p>
+        <div class="mark-body">
+          <p>Our industry is always changing and evolving. It is crucial that you continue your own education and do your own research on the payments industry.</p>
+        </div>
+        <div class="reflect-block">
+          <p class="reflect-label">Reflect</p>
+          <p class="reflect-text">What are ways you can ensure you stay on top of industry changes?</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
