@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propelr: Passion for Payments</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding:.5rem}
+
+.content-row{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:32px;
+  align-items:center;
+}
+@media (max-width:720px){
+  .content-row{grid-template-columns:1fr}
+}
+
+.text-col{text-align:center}
+
+.headline{
+  font-family:'Inter',sans-serif;
+  font-weight:700;
+  font-size:32px;
+  line-height:1.3;
+  margin-bottom:16px;
+  text-wrap:balance;
+}
+.headline .navy{color:#1B2F5B}
+.headline .green{color:#59A398}
+
+.body-text{
+  font-size:18px;
+  color:#444;
+  line-height:1.7;
+  text-wrap:balance;
+}
+
+.video-col{display:flex;justify-content:center}
+.video-col video{
+  width:100%;
+  aspect-ratio:16/9;
+  height:auto;
+  display:block;
+  border-radius:8px;
+  border:1px solid #d8dce8;
+  object-fit:cover;
+}
+</style>
+</head>
+<body>
+
+<div class="content-row">
+
+  <div class="text-col">
+    <p class="headline"><span class="navy">We have a passion for payments</span> <span class="green">and the people behind them.</span></p>
+    <p class="body-text">The Propelr engine is what powers our day-to-day and allows us to run full throttle. From sales assistance and underwriting to marketing and personalized support, we have a team dedicated to each stage of our client journey. The best part? We're just revving up!</p>
+  </div>
+
+  <div class="video-col">
+    <video controls preload="metadata">
+      <source src="https://lushbeth-creator.github.io/GroundSchool/Propelr_Angelo_Video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+</div>
+
+</body>
+</html>
+
