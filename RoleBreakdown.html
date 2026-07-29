@@ -17,8 +17,8 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
 }
 .panel{padding:22px 24px}
 
-.eyebrow{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#59A398;margin-bottom:10px}
-.panel-purpose{font-size:16px;font-weight:400;color:#444;line-height:1.65;margin-bottom:14px}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#59A398;margin-bottom:10px}
+.panel-purpose{font-size:18px;font-weight:400;color:#444;line-height:1.65;margin-bottom:14px}
 .panel-sub{font-size:16px;font-weight:600;color:#444;line-height:1.6;margin-bottom:20px}
 
 .role-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
@@ -26,9 +26,17 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
 @media (max-width:480px){.role-grid{grid-template-columns:1fr}}
 
 .role-card{background:linear-gradient(to bottom,#ffffff 0%,#E8EDF8 100%);border:1px solid #A6B3D5;border-radius:10px;padding:16px 14px;display:flex;flex-direction:column;align-items:center;text-align:center}
-.role-icon{width:34px;height:34px;margin-bottom:10px}
-.role-title{font-family:'Inter',sans-serif;font-weight:700;font-size:14px;color:#1B2F5B;margin-bottom:6px}
-.role-question{font-size:12.5px;color:#555;line-height:1.45;margin-bottom:12px;flex-grow:1}
+.role-icon{
+  width:40px;height:40px;margin-bottom:10px;
+  border-radius:8px;
+  background:linear-gradient(to bottom,#F3F6FF 0%,#E4E9F7 100%);
+  border:1px solid #A6B3D5;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+.role-icon svg{width:20px;height:20px}
+.role-title{font-family:'Inter',sans-serif;font-weight:700;font-size:16px;color:#1B2F5B;margin-bottom:6px}
+.role-question{font-size:14px;color:#555;line-height:1.45;margin-bottom:12px;flex-grow:1}
 
 .hour-input-wrap{display:flex;align-items:center;gap:6px}
 .hour-input{
@@ -36,7 +44,7 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
   color:#1B2F5B;border:1px solid #A6B3D5;border-radius:6px;padding:6px 4px;background:#ffffff;
 }
 .hour-input:focus{outline:none;border-color:#5D70AE}
-.hour-unit{font-size:11px;color:#666;font-weight:600}
+.hour-unit{font-size:12px;color:#666;font-weight:600}
 
 .feedback-note{border-radius:6px;padding:10px 14px;margin-bottom:14px;width:100%}
 .feedback-note.under{background:#fff8e6;border:1px solid #B8860B}
@@ -45,7 +53,7 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
 .feedback-note.over p{color:#1B2F5B}
 .feedback-note.exact{background:linear-gradient(135deg,#ffffff 0%,#DAF3EF 100%);border:1px solid #59A398}
 .feedback-note.exact p{color:#1B2F5B}
-.feedback-note p{font-size:12.5px;font-weight:600;line-height:1.4;margin-bottom:6px}
+.feedback-note p{font-size:14px;font-weight:600;line-height:1.4;margin-bottom:6px}
 .feedback-note p:last-child{margin-bottom:0}
 
 .btn-primary{
@@ -70,12 +78,12 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
   width:100%;max-width:960px;max-height:94%;overflow-y:auto;
 }
 .modal-header{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-bottom:1px solid #d8dce8}
-.modal-eyebrow{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#59A398}
+.modal-eyebrow{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#59A398}
 .modal-close{background:none;border:none;font-size:16px;color:#59A398;cursor:pointer;line-height:1;font-weight:400;transition:color .15s,font-weight .15s}
 .modal-close:hover{color:#5D70AE;font-weight:700}
 .modal-body{padding:14px 22px 18px}
-.modal-title{font-family:'Inter',sans-serif;font-weight:700;font-size:16px;color:#1B2F5B;margin-bottom:6px}
-.modal-text{font-size:12.5px;color:#444;line-height:1.45;margin-bottom:8px}
+.modal-title{font-family:'Inter',sans-serif;font-weight:700;font-size:20px;color:#1B2F5B;margin-bottom:6px}
+.modal-text{font-size:14px;color:#444;line-height:1.45;margin-bottom:8px}
 .modal-text:last-of-type{margin-bottom:0}
 
 .breakdown-table{border:1px solid #d8dce8;border-radius:8px;overflow:hidden;margin-top:16px}
@@ -83,8 +91,8 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
 .bt-row:nth-child(even){background:#F3F6FF}
 .bt-left{display:flex;align-items:center;gap:9px}
 .bt-swatch{width:9px;height:9px;border-radius:3px;flex-shrink:0}
-.bt-name{font-size:12px;color:#1B2F5B;font-weight:600}
-.bt-hours{font-size:12px;color:#444;font-weight:700;white-space:nowrap}
+.bt-name{font-size:14px;color:#1B2F5B;font-weight:600}
+.bt-hours{font-size:14px;color:#444;font-weight:700;white-space:nowrap}
 
 
 </style>
@@ -124,49 +132,49 @@ var categories = [
     id: 'prospecting', title: 'Prospecting',
     question: 'How many hours a week do you think you will spend on prospecting, aiming for 25 conversations?',
     standard: 15, color: '#5D70AE',
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#5D70AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>'
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#59A398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>'
   },
   {
     id: 'followup', title: 'Follow Up',
     question: 'How many hours a week do you think you will spend following up with merchants?',
     standard: 9, color: '#59A398',
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#5D70AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>'
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#59A398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>'
   },
   {
     id: 'discovery', title: 'Discovery',
     question: 'How many hours a week do you think you will spend running Discovery Appointments, aiming for 5 a week?',
     standard: 5, color: '#1B2F5B',
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#5D70AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>'
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#59A398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>'
   },
   {
     id: 'decision', title: 'Decision Appointment',
     question: 'How many hours a week do you think you will spend running Decision Appointments, aiming for 3 a week?',
     standard: 3, color: '#A6B3D5',
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#5D70AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l4 4L20 4"/></svg>'
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#59A398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l4 4L20 4"/></svg>'
   },
   {
     id: 'installs', title: 'Installs',
     question: 'How many hours a week do you think you will spend on installs, aiming for 2 a week?',
     standard: 3, color: '#B0D5D4',
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#5D70AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6.5" r="2.3"/><path d="M6 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/><path d="M4 12h16"/></svg>'
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#59A398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6.5" r="2.3"/><path d="M6 20c0-4 2.7-6.5 6-6.5s6 2.5 6 6.5"/><path d="M4 12h16"/></svg>'
   },
   {
     id: 'networking', title: 'Networking',
     question: 'How many hours a week do you think you will spend networking?',
     standard: 2, color: '#7A8AB8',
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#5D70AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4-2 3 2 4-3 3 2 4-2"/><path d="M8 10l-2 8M11 9.5l1 8.5M16 9.5l2 8.5"/></svg>'
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#59A398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l4-2 3 2 4-3 3 2 4-2"/><path d="M8 10l-2 8M11 9.5l1 8.5M16 9.5l2 8.5"/></svg>'
   },
   {
     id: 'admincalls', title: 'Admin & Company Calls',
     question: 'How many hours a week do you think you will spend on admin tasks and company calls?',
     standard: 2, color: '#8B8FA3',
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#5D70AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="1.5"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 10h6M9 14h6M9 18h3"/></svg>'
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#59A398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="4" width="12" height="16" rx="1.5"/><path d="M9 4V3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1"/><path d="M9 10h6M9 14h6M9 18h3"/></svg>'
   },
   {
     id: 'training', title: 'Training',
     question: 'How many hours a week do you think you will spend on training?',
     standard: 1, color: '#444444',
-    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#5D70AE" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M2 19h20l-2-3H4l-2 3z"/></svg>'
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="#59A398" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M2 19h20l-2-3H4l-2 3z"/></svg>'
   }
 ];
 
