@@ -11,7 +11,7 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
 
 .content-row{
   display:grid;
-  grid-template-columns:1fr 1fr;
+  grid-template-columns:1fr 1.4fr;
   gap:32px;
   align-items:center;
 }
@@ -19,19 +19,21 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
   .content-row{grid-template-columns:1fr}
 }
 
+.text-col{text-align:center}
+
 .headline{
   font-family:'Inter',sans-serif;
   font-weight:700;
-  font-size:36px;
+  font-size:28px;
   line-height:1.3;
-  margin-bottom:18px;
+  margin-bottom:16px;
   text-wrap:balance;
 }
 .headline .navy{color:#1B2F5B}
 .headline .green{color:#59A398}
 
 .body-text{
-  font-size:18px;
+  font-size:16px;
   color:#444;
   line-height:1.7;
   text-wrap:balance;
@@ -40,11 +42,12 @@ body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding
 .video-col{display:flex;justify-content:center}
 .video-col video{
   width:100%;
-  max-width:420px;
+  aspect-ratio:16/9;
   height:auto;
   display:block;
   border-radius:8px;
   border:1px solid #d8dce8;
+  object-fit:cover;
 }
 </style>
 </head>
