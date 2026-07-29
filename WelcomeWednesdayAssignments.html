@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Propelr: Welcome Wednesday Assignments</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:transparent;font-family:'Inter',sans-serif;color:#1a1a2e;padding:.5rem}
+
+.card-title{font-family:'Inter',sans-serif;font-weight:700;font-size:16px;color:#1B2F5B;margin-bottom:9px}
+.card-body{font-size:14px;color:#555555;line-height:1.55}
+.card-body strong{color:#1B2F5B;font-weight:700}
+.card-body em{color:#1B2F5B;font-style:italic;font-weight:600}
+.card-body + .card-body{margin-top:8px}
+.card-cta{display:inline-block;font-size:11.5px;font-weight:700;color:#5D70AE;letter-spacing:.02em;text-decoration:none}
+.card-cta:hover{color:#59A398}
+.cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:18px 24px;margin-top:14px}
+.task-item{
+  display:block;position:relative;padding-left:18px;margin:4px 0 6px;
+  font-size:14px;font-weight:700;color:#1B2F5B;line-height:1.5;
+}
+.task-item-link{text-decoration:none;cursor:pointer}
+.task-item-link:hover{color:#5D70AE;text-decoration:underline}
+.task-item::before{content:"\203A";position:absolute;left:0;top:0;color:#59A398;font-weight:700;font-size:15px;line-height:1.3}
+.task-item em{color:#5D70AE;font-style:normal;font-weight:700}
+.inline-link{color:#5D70AE;font-weight:700;text-decoration:none}
+.inline-link:hover{color:#59A398;text-decoration:underline}
+
+/* ===== Assignment accordion ===== */
+.acc{border:1px solid #A6B3D5;border-radius:8px;overflow:hidden;background:linear-gradient(to bottom,#F3F6FF 0%,#E4E9F7 100%)}
+.acc-item{border-top:1px solid #A6B3D5}
+.acc-item:first-child{border-top:none}
+.acc-btn{
+  width:100%;background:none;border:none;padding:14px 18px;display:flex;
+  justify-content:space-between;align-items:center;gap:14px;cursor:pointer;text-align:left;
+  transition:background .15s;
+}
+.acc-btn:hover{background:#e8edf8}
+.acc-left{display:flex;align-items:center;gap:10px}
+.acc-item-icon{width:19px;height:19px;flex-shrink:0}
+.acc-item-icon svg{width:100%;height:100%;stroke:#59A398}
+.acc-title{font-family:'Inter',sans-serif;font-weight:700;font-size:16px;color:#1B2F5B}
+.acc-icon{
+  width:22px;height:22px;border-radius:50%;background:#ffffff;border:1px solid #A6B3D5;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  transition:background .15s,border-color .15s,transform .2s;
+}
+.acc-icon svg{stroke:#5D70AE;transition:stroke .15s;display:block}
+.acc-btn[aria-expanded="true"] .acc-icon{background:#5D70AE;border-color:#5D70AE;transform:rotate(45deg)}
+.acc-btn[aria-expanded="true"] .acc-icon svg{stroke:#fff}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .28s ease}
+.acc-body.open{max-height:900px}
+.acc-inner{padding:4px 18px 18px;border-top:1px solid #A6B3D5}
+</style>
+</head>
+<body>
+
+<div class="acc">
+
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" onclick="tog(this)">
+          <div class="acc-left">
+            <div class="acc-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="12" rx="1.5"/>
+                <path d="M2 19h20l-2-3H4l-2 3z"/>
+              </svg>
+            </div>
+            <span class="acc-title">eLearning in Reach 360</span>
+          </div>
+          <span class="acc-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke-width="2" stroke-linecap="round">
+              <line x1="6" y1="2" x2="6" y2="10"/><line x1="2" y1="6" x2="10" y2="6"/>
+            </svg>
+          </span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p class="task-item">How to Protect Yourself Against Phishing Attacks</p>
+            <p class="card-body">Complete this in Reach 360 <strong>today</strong>.</p>
+            <p class="card-body">Check your email for your enrollment link. No homework showing yet? <a class="inline-link" href="mailto:blush@propelrpay.com?subject=Reach%20360%20Enrollment" target="_blank" rel="noopener">Email Beth</a> to get enrolled.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc-item">
+        <button class="acc-btn" aria-expanded="false" onclick="tog(this)">
+          <div class="acc-left">
+            <div class="acc-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7v5l3.5 2"/>
+              </svg>
+            </div>
+            <span class="acc-title">Calculate Your 40-Hour Work Week</span>
+          </div>
+          <span class="acc-icon">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke-width="2" stroke-linecap="round">
+              <line x1="6" y1="2" x2="6" y2="10"/><line x1="2" y1="6" x2="10" y2="6"/>
+            </svg>
+          </span>
+        </button>
+        <div class="acc-body">
+          <div class="acc-inner">
+            <p class="card-body">Complete the 40-Hour Work Week activity in the Employee Portal. Map out how you'd spend your week, then see how it compares to the Mission Standard.</p>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+<script>
+function tog(btn) {
+  var exp = btn.getAttribute('aria-expanded') === 'true';
+  document.querySelectorAll('.acc-btn').forEach(function(b) {
+    if (b !== btn) {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.classList.remove('open');
+    }
+  });
+  btn.setAttribute('aria-expanded', String(!exp));
+  var body = btn.nextElementSibling;
+  if (exp) { body.classList.remove('open'); } else { body.classList.add('open'); }
+}
+</script>
+</body>
+</html>
