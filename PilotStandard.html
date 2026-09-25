@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Propelr: The Pilot Standard</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#5D70AE;--green:#59A398;--navy:#1B2F5B;--purple:#A6B3D5;--light-purple:#F3F6FF;--mint:#DAF3EF;--line:#d8dce8;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:transparent;font-family:'Inter',Arial,sans-serif;color:#000;padding:.5rem}
+
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.heading{font-size:20px;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:12px}
+.text{font-size:18px;color:#000;line-height:1.7;margin-bottom:24px}
+
+.standard-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:18px;align-items:stretch}
+.standard-tabs{display:flex;flex-direction:column;gap:10px}
+.standard-tabs .standard-tab{flex:1;align-content:center}
+.standard-tab{
+  width:100%;text-align:left;cursor:pointer;font-family:inherit;
+  border:1px solid var(--purple);background:linear-gradient(135deg,#ffffff 0%,#E4E9F7 100%);border-radius:14px;padding:16px 18px;
+  display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;
+  transition:background .15s,border-color .15s;
+}
+.standard-tab:hover{border-color:var(--green)}
+.standard-tab .num{
+  grid-row:1 / span 2;display:grid;place-items:center;width:32px;height:32px;border-radius:8px;
+  background:linear-gradient(to bottom,#F3F6FF 0%,#E4E9F7 100%);border:1px solid var(--purple);color:var(--blue);font-size:14px;font-weight:700;
+}
+.standard-tab b{font-size:20px;font-weight:700;color:var(--navy);line-height:1.3}
+.standard-tab small{font-size:16px;color:#000;line-height:1.4;margin-top:4px}
+.standard-tab.active{border-color:var(--green);background:linear-gradient(135deg,#ffffff 0%,var(--mint) 100%)}
+.standard-tab:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+
+.standard-detail{border:1px solid var(--purple);border-radius:18px;background:linear-gradient(135deg,#ffffff 0%,#E4E9F7 100%);padding:24px;min-width:0}
+.standard-panel{display:none}
+.standard-panel.active{display:block}
+.standard-head{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+.standard-number{flex-shrink:0;display:grid;place-items:center;width:52px;height:52px;border-radius:12px;background:var(--navy);color:#ffffff;font-size:18px;font-weight:700}
+.standard-head .eyebrow{margin-bottom:4px}
+.standard-head h3{font-size:20px;font-weight:700;color:var(--navy);line-height:1.3}
+
+.standard-columns{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.standard-columns>div{padding:16px 18px;border-radius:12px;background:linear-gradient(135deg,#ffffff 0%,#E4E9F7 100%);border:1px solid var(--purple)}
+.standard-columns .coach{grid-column:1 / -1;background:linear-gradient(135deg,#ffffff 0%,var(--mint) 100%);border-color:var(--green)}
+.standard-columns h4{font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+.standard-columns p,.standard-columns li{font-size:18px;color:#000;line-height:1.55}
+.standard-columns ul{padding-left:20px}
+.standard-columns li+li{margin-top:4px}
+
+.standard-bridge{
+  display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:10px;align-items:center;
+  margin-top:24px;padding:18px 20px;border-radius:14px;background:var(--navy);color:#ffffff;
+}
+.standard-bridge div{text-align:center}
+.standard-bridge span{display:block;color:#9ed8cf;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.standard-bridge strong{font-size:16px;font-weight:700}
+.standard-bridge i{font-style:normal;color:#9ed8cf;font-size:18px}
+
+@media (max-width:950px){.standard-layout{grid-template-columns:1fr}.standard-tabs{display:grid;grid-template-columns:1fr 1fr}}
+@media (max-width:650px){
+  .standard-tabs,.standard-columns{grid-template-columns:1fr}
+  .standard-columns .coach{grid-column:auto}
+  .standard-bridge{grid-template-columns:1fr}
+  .standard-bridge i{transform:rotate(90deg)}
+}
+</style>
+</head>
+<body>
+
+<h2 class="heading">How we fly matters.</h2>
+<p class="text">Quota tells you what success produces. The Pilot Standard breaks down the repeatable behaviors that create it. Select each principle to explore what it looks like in the field, what strong execution sounds like and how you can apply it during your first 90 days.</p>
+
+<div class="standard-layout">
+  <div class="standard-tabs" role="tablist" aria-label="Pilot Standard principles">
+    <button class="standard-tab active" type="button" role="tab" aria-selected="true" data-standard="runway"><span class="num">01</span><b>Own Your Runway</b><small>Plan it. Work it. Know your numbers.</small></button>
+    <button class="standard-tab" type="button" role="tab" aria-selected="false" data-standard="curiosity"><span class="num">02</span><b>Lead With Curiosity</b><small>Understand before you recommend.</small></button>
+    <button class="standard-tab" type="button" role="tab" aria-selected="false" data-standard="purpose"><span class="num">03</span><b>Move With Purpose</b><small>Every activity has a next step.</small></button>
+    <button class="standard-tab" type="button" role="tab" aria-selected="false" data-standard="relationship"><span class="num">04</span><b>Protect the Relationship</b><small>The signature is not the finish line.</small></button>
+  </div>
+
+  <div class="standard-detail" aria-live="polite">
+    <div class="standard-panel active" data-panel="runway">
+      <div class="standard-head"><span class="standard-number">01</span><div><p class="eyebrow">Own Your Runway</p><h3>Run your territory like a business.</h3></div></div>
+      <div class="standard-columns">
+        <div><h4>What it means</h4><p>Take responsibility for your activity, pipeline and results. Plan your week intentionally and know where you stand before someone has to ask.</p></div>
+        <div><h4>What it looks like</h4><ul><li>Prospecting is scheduled, not squeezed in.</li><li>Leads and activity are entered in Stratus.</li><li>Your pipeline reflects what is actually happening.</li><li>You know the next action on active opportunities.</li></ul></div>
+        <div class="coach"><h4>Ask yourself</h4><p>"If my leader opened Stratus today, would it tell the same story I would?"</p></div>
+      </div>
+    </div>
+    <div class="standard-panel" data-panel="curiosity">
+      <div class="standard-head"><span class="standard-number">02</span><div><p class="eyebrow">Lead With Curiosity</p><h3>Diagnose before you prescribe.</h3></div></div>
+      <div class="standard-columns">
+        <div><h4>What it means</h4><p>Qualification is not a checklist you rush through. Learn how the merchant operates, what they use today, where friction exists and what matters to them.</p></div>
+        <div><h4>What it looks like</h4><ul><li>Ask about the business before talking product.</li><li>Understand volume, ticket, card mix and environment.</li><li>Identify operational and technology needs.</li><li>Know when to involve Product or Solutions Engineering.</li></ul></div>
+        <div class="coach"><h4>Ask yourself</h4><p>"Do I know enough to explain why this solution fits this merchant?"</p></div>
+      </div>
+    </div>
+    <div class="standard-panel" data-panel="purpose">
+      <div class="standard-head"><span class="standard-number">03</span><div><p class="eyebrow">Move With Purpose</p><h3>Turn activity into forward motion.</h3></div></div>
+      <div class="standard-columns">
+        <div><h4>What it means</h4><p>Being busy is not the same as building a business. Each conversation, follow-up and CRM update should move the opportunity toward a clear next step.</p></div>
+        <div><h4>What it looks like</h4><ul><li>Follow-up has a reason and a date.</li><li>Merchant commitments are documented.</li><li>Applications are complete before handoff.</li><li>You remove avoidable delays before submission.</li></ul></div>
+        <div class="coach"><h4>Ask yourself</h4><p>"What specifically needs to happen next, and who owns it?"</p></div>
+      </div>
+    </div>
+    <div class="standard-panel" data-panel="relationship">
+      <div class="standard-head"><span class="standard-number">04</span><div><p class="eyebrow">Protect the Relationship</p><h3>Sell for the relationship you want to keep.</h3></div></div>
+      <div class="standard-columns">
+        <div><h4>What it means</h4><p>Set accurate expectations, solution responsibly and make clean handoffs. Long-term portfolio health begins before the merchant ever activates.</p></div>
+        <div><h4>What it looks like</h4><ul><li>Pricing and program expectations are clear.</li><li>The MPA reflects what was actually discussed.</li><li>Handoffs include the information the next team needs.</li><li>You remain accountable for the merchant experience.</li></ul></div>
+        <div class="coach"><h4>Ask yourself</h4><p>"Would I be comfortable explaining this recommendation to the merchant again 6 months from now?"</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="standard-bridge">
+  <div><span>Behaviors</span><strong>The Pilot Standard</strong></div><i aria-hidden="true">&#8594;</i>
+  <div><span>Execution</span><strong>Healthy Pipeline + Clean Deals</strong></div><i aria-hidden="true">&#8594;</i>
+  <div><span>Outcome</span><strong>$10K + 4 MIDs</strong></div><i aria-hidden="true">&#8594;</i>
+  <div><span>Beyond</span><strong>Top Gun + Captains Club</strong></div>
+</div>
+
+<script>
+document.querySelectorAll('.standard-tab').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.standard-tab').forEach(function(b){
+      var on = b === btn;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-selected', String(on));
+    });
+    document.querySelectorAll('.standard-panel').forEach(function(p){
+      p.classList.toggle('active', p.dataset.panel === btn.dataset.standard);
+    });
+  });
+});
+</script>
+</body>
+</html>

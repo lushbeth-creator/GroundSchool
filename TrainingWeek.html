@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Propelr: Training Week</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#5D70AE;--green:#59A398;--navy:#1B2F5B;--purple:#A6B3D5;--mint:#DAF3EF;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:transparent;font-family:'Inter',Arial,sans-serif;color:#000;padding:.5rem}
+
+.heading{font-size:20px;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:12px}
+.text{font-size:18px;color:#000;line-height:1.7;margin-bottom:22px}
+
+.training{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+@media (max-width:860px){.training{grid-template-columns:1fr}}
+.day{
+  background:linear-gradient(135deg,#ffffff 0%,#E4E9F7 100%);
+  border:1px solid var(--purple);border-radius:16px;padding:26px;
+}
+.day .day-label{font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:6px}
+.day h3{font-size:20px;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:10px}
+.day p{font-size:18px;color:#000;line-height:1.6}
+
+.roundtable{
+  display:flex;gap:22px;align-items:center;
+  background:linear-gradient(135deg,var(--mint) 0%,#ffffff 100%);
+  border:1px solid #a8d6cf;border-radius:16px;padding:24px 26px;
+}
+.rt-badge{
+  flex-shrink:0;width:76px;height:76px;border-radius:18px;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+}
+.rt-badge svg{width:56px;height:56px}
+.rt-badge .table{fill:#9ed8cf}
+.rt-badge .seats circle{fill:#ffffff}
+.roundtable h3{font-size:20px;font-weight:700;color:var(--navy);line-height:1.3;margin-bottom:6px}
+.roundtable p{font-size:18px;color:#000;line-height:1.6}
+@media (max-width:560px){.roundtable{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<h2 class="heading">Onboarding is a runway, not an information dump.</h2>
+<p class="text">The following Monday through Wednesday builds the foundational knowledge and skills you need now. Additional solutions and advanced topics arrive as they become relevant.</p>
+
+<div class="training">
+  <div class="day">
+    <p class="day-label">Monday: Day 1</p>
+    <h3>Payments, Risk &amp; Compliance</h3>
+    <p>Build the foundation for understanding how payments work, how risk shapes merchant acceptance and why compliance matters in every recommendation.</p>
+  </div>
+  <div class="day">
+    <p class="day-label">Tuesday: Day 2</p>
+    <h3>Solutions, Pricing &amp; Building a Healthy Portfolio</h3>
+    <p>Connect merchant needs to the right solution, understand pricing approaches and learn how strong solutioning supports long-term portfolio health.</p>
+  </div>
+  <div class="day">
+    <p class="day-label">Wednesday: Day 3</p>
+    <h3>Sales Skills &amp; Account Retention</h3>
+    <p>Practice merchant conversations, move opportunities forward and understand how the relationship continues after the signature.</p>
+  </div>
+</div>
+
+<div class="roundtable">
+  <div class="rt-badge" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><circle class="table" cx="12" cy="12" r="5"/><g class="seats"><circle cx="12.0" cy="3.8" r="2.1"/><circle cx="19.1" cy="7.9" r="2.1"/><circle cx="19.1" cy="16.1" r="2.1"/><circle cx="12.0" cy="20.2" r="2.1"/><circle cx="4.9" cy="16.1" r="2.1"/><circle cx="4.9" cy="7.9" r="2.1"/></g></svg>
+  </div>
+  <div>
+    <h3>Mandatory Friday Roundtable: 1 Hour</h3>
+    <p>The week following training, reconnect to apply what you learned, discuss real opportunities, ask questions and identify the next skills or solutions you need.</p>
+  </div>
+</div>
+
+</body>
+</html>
